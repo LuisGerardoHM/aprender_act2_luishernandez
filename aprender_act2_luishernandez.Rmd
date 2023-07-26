@@ -1,0 +1,81 @@
+---
+title: "aprender_act2_luishernandez"
+author: "Luis G. Hernández"
+date: "2023-07-26"
+output: github_document
+---
+
+Este documento se utilizará para seguir las indicaciones de la actividad 2, objetivos 1 y 2.
+
+```{r NHANES, echo=TRUE, message=FALSE}
+# Se instala/carga el paquete NHANES, la actividad 2 requiere que NO haya comandos "install.packages"
+library("NHANES")
+
+# Carga la base de datos "NHANES"
+data("NHANES", package = "NHANES")
+```
+
+```{r tidyverse, echo=FALSE, message=FALSE}
+library("tidyverse")
+```
+
+Este paquete toma los resultados de la _American National Health and Nutrition Examination Surveys_, que realiza encuestas complejas para realizar estimaciones acerca de la población de Estados Unidos durante los años de 2009 a 2012 con ciertos ajustes necesarios para evitar la sobrerrepresentación de minorías.
+
+Dentro de las cariables que presenta este paquete se encuentrasn las siguientes categorías:
+
+* **Var. de estudio**
+  * ID (int)
+  * SurveyYr (fct)
+* **Var. demográficas**
+  * Gender (int)
+  * Age (fct)
+  * Education (fct)
+* **Var. de medidas físicas**
+  * Weight (dbl) 
+  * Height (dbl)
+  * BMI (_Índice de Masa Corporal_, dbl)
+  * BPSys1 (_Primera medida presión arterial sistólica_, dbl)
+* **Var. de estilo de vida**
+  * PhysActive (fct)
+  * TVHrsDay (fct)
+* **Var. de salud**
+  * TotChol (dbl)
+  * Diabetes (fct)
+  
+Podemos conocer el número de observaciones y la cantidad de variables declaradas en este paquete:
+
+```{r obs_var, echo=TRUE, message=FALSE}
+# Obtenemos el número de observaciones dentro de NHANES
+nrow(NHANES)
+
+# Obtenemos el número de variables dentro de NHANES
+ncol(NHANES)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
