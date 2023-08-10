@@ -21,7 +21,7 @@ library("tidyverse")
 
 Este paquete toma los resultados de la _American National Health and Nutrition Examination Surveys_, que realiza encuestas complejas para realizar estimaciones acerca de la población de Estados Unidos durante los años de 2009 a 2012 con ciertos ajustes necesarios para evitar la sobrerrepresentación de minorías.
 
-Dentro de las variables que presenta este paquete se encuentrasn las siguientes categorías:
+Dentro de las variables que presenta este paquete se encuentran las siguientes categorías:
 
 * **Var. de estudio**
   * ID (int)
@@ -53,6 +53,16 @@ ncol(NHANES)
 ```
 
 
+El tamaño de esta base de datos nos permite crear ilustración para digerir mejor la cantidad de información que se maneja, como el siguiente ejemplo, que usa las variables **IMC** y **Presión arterial sistólica media**.
+
+```{r scatter_plot, echo=FALSE, message=FALSE, warning=FALSE}
+# Obtener scatterplot de la variable BMI y BPSysAve con identificación de colores por género
+ggplot(NHANES, aes(x = BPSysAve, y = BMI, color = Gender)) +
+  geom_point()
+
+# Guardamos la figura que hemos creado con ggsave
+ggsave("bmi_bpsave.pdf", width = 6, height = 4)
+```
 
 
 

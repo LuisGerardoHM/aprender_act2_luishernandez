@@ -20,7 +20,7 @@ realizar estimaciones acerca de la población de Estados Unidos durante
 los años de 2009 a 2012 con ciertos ajustes necesarios para evitar la
 sobrerrepresentación de minorías.
 
-Dentro de las cariables que presenta este paquete se encuentrasn las
+Dentro de las variables que presenta este paquete se encuentran las
 siguientes categorías:
 
 - **Var. de estudio**
@@ -58,3 +58,10 @@ ncol(NHANES)
 ```
 
     ## [1] 76
+
+El tamaño de esta base de datos nos permite crear ilustración para
+digerir mejor la cantidad de información que se maneja, como el
+siguiente ejemplo, que usa las variables **IMC** y **Presión arterial
+sistólica media**.
+
+![](aprender_act2_luishernandez_files/figure-gfm/histograma-1.png)<!-- -->
